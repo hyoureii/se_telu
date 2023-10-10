@@ -9,7 +9,7 @@ func main() {
 	var x, y float64
 	fmt.Println("Please input x and y")
 	fmt.Scan(&x, &y)
-	fmt.Printf("Result : %f", calc(x, y))
+	fmt.Printf("Result : %.2f", calc(x, y))
 }
 
 func calc(x, y float64) float64 {
