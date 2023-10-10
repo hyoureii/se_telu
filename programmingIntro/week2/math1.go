@@ -7,9 +7,9 @@ import (
 func main() {
 
 	var x, y float64
-	fmt.Println("Please input x and y")
+	fmt.Println("Masukkan nilai x dan y")
 	fmt.Scan(&x, &y)
-	fmt.Printf("Result : %.2f", calc(x, y))
+	fmt.Printf("Hasil : %.2f", calc(x, y))
 }
 
 func calc(x, y float64) float64 {
