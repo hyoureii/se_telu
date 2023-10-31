@@ -7,7 +7,7 @@ import (
 func main() {
 	var days int
 	var avg float64
-	fmt.Println("Input how much days and how much hours per day")
+	fmt.Println("Enter how much days and how much hours each day")
 	fmt.Scan(&days)
 	hours := make([]int, days)
 	for i := 0; i < days; i++ {
