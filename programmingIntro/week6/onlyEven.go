@@ -6,14 +6,14 @@ import (
 
 func main() {
 	var num, total uint
-  fmt.Println("Input however many numbers you like")
+	fmt.Println("Enter a number, will end if the number is not even")
 	for true {
 		fmt.Scan(&num)
 		if num%2 == 0 {
 			total += num
 		} else {
-      break
-    }
+			break
+		}
 	}
-  fmt.Printf("Total : %d", total)
+	fmt.Printf("Total even : %d", total)
 }

@@ -2,29 +2,23 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
-func main() {
-	var num int
-	fmt.Scan(&num)
-	nums := strconv.Itoa(num)
-	if len(nums) <= 2 {
-		fmt.Printf("%t", true)
-		fmt.Println("less or equal than 2")
-	} else {
-		diff := int(nums[1]) - int(nums[0])
-		consecutive := true
-		for digit := 2; digit < len(nums); digit++ {
-			if int(nums[digit])-int(nums[digit-1]) != diff {
-				fmt.Printf("%t", false)
-				fmt.Println("not same")
-				break
-			}
-		}
-		if consecutive == true {
-			fmt.Printf("%t", true)
-			fmt.Println("same")
+func isConsecutive(num uint) bool {
+	current := int(num)%10 - (int(num)/10)%10
+	for num > 10 {
+		if current > 1 || current < -1 || current == 0 {
+			return false
+		} else {
+			num /= 10
 		}
 	}
+	return true
+}
+
+func main() {
+	var x uint
+	fmt.Printf("Enter a positive integer\n")
+	fmt.Scan(&x)
+	fmt.Printf("Consecutive : %t", isConsecutive(x))
 }

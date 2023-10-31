@@ -6,6 +6,7 @@ import (
 
 func main() {
 	var amount, balance int
+	fmt.Printf("Enter transactions, will end if input is 0\n")
 	for {
 		fmt.Scan(&amount)
 		if amount == 0 {
