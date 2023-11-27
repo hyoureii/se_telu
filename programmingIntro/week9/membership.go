@@ -19,5 +19,5 @@ func main() {
 	if card == true && amount >= 200000 {
 		cashback = true
 	}
-	fmt.Printf("Kartu? %t\nDiskon? %t\nCashback? %t", card, discount, cashback)
+	fmt.Printf("Card? %t\nDiscount? %t\nCashback? %t", card, discount, cashback)
 }
